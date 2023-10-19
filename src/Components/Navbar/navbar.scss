@@ -1,4 +1,5 @@
-@import '../Variables/variables.scss'; 
+@import '../../Variables/variables.scss'; 
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&display=swap");
 
 * {
     padding: 0;
@@ -7,8 +8,11 @@
     font-family: $lora;
 }
 
-h3 {
+.logo {
     font-size: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: $thewhite;
 }
 
 header {
@@ -19,6 +23,7 @@ header {
     padding: 0 4rem;
     background-color: $thered;
     color: $thewhite;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav a {
@@ -26,12 +31,25 @@ nav a {
     color: $thewhite;
     text-decoration: none;
     margin-left: 28px;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
-nav a:hover {
-    color: aqua;
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 0; /* Initially, the line has zero width */
+    height: 2px;
+    background-color: #f8b8ba;
+    bottom: 0;
+    left: 0; /* Start from the left */
+    transition: width 0.2s;
 }
 
+nav a:hover::before {
+    width: 100%; /* Expand the line width to 100% on hover */
+}
 
 
 header .nav-btn {
@@ -47,7 +65,7 @@ header .nav-btn {
 
 @media only screen and (max-width: 700px){
 
-    h3 {
+    .logo {
         font-size: 30px;
         letter-spacing: 1.5px;
     }
@@ -88,69 +106,4 @@ header .nav-btn {
         right: 2rem;
     }
 
-
 }
-
-/*
-.navbar {
-    height: 80px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $thered;
-}
-
-header .nav-btn {
-    padding: 5px;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    outline: none;
-    visibility: visible;
-    opacity: 1;
-}
-
-header nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    transition: 1s;
-    transform: translateY(-100vh);
-}
-
-nav a {
-    margin: 0 2rem;
-    text-decoration: none;
-    color: $thewhite;
-}
-
-nav a:hover {
-    color: aqua;
-
-}
-
-@media screen and (min-width: 760px) {
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 80px;
-        padding: 0 2rem;
-    }
-
-    header .nav-btn {
-        visibility: hidden;
-        opacity: 0;
-    }
-
-
-
-}*/

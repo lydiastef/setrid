@@ -1,17 +1,26 @@
 import {FaBars, FaTimes} from 'react-icons/fa';
 import {useRef} from 'react';
-import '../Styles/navbar.css';
+import './navbar.css';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 function Navbar() {
-    const navRef = useRef(); 
 
+    const navRef = useRef(); 
     const showNavbar = () => {
         navRef.current.classList.toggle('responsive_nav');
-    }
+    } // Switch between hamburger menu and nav items on screen after screen size
+    
+    const navigate = useNavigate();      
+    function handleClick() {
+        navigate('/landingpage');
+    } // Click logo to go back to landingpage
 
     return (
         <header>
-            <h3>Læknasetrið</h3>
+            <Link to='/Landingpage' style={{ textDecoration: 'none' }}>
+                <div className='logo' onClick={handleClick}>Læknasetrið</div>
+            </Link>
             <nav ref={navRef}> 
                 <div className='a-container'>
                     <a href='/#'>Home</a>
