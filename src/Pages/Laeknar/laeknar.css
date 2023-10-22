@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lora", serif;
+}
+
+.laeknar-container {
+  margin: 2rem 4rem;
+}
+
+.laeknar-h3 {
+  color: #7D070C;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 22px;
+}
+
+ul li {
+  margin-bottom: 0.7rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .laeknar-container {
+    margin: 3rem 6rem;
+  }
+  .laeknar-h3 {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .laeknar-container {
+    margin: 3rem 8rem;
+  }
+  .laeknar-h3 {
+    font-size: 30px;
+  }
+  ul li {
+    margin-bottom: 0.7rem;
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=laeknar.css.map */

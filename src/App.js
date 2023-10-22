@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './Components/Navbar/navbar';
-import Landingpage from './Pages/landingpage';
-import Laeknar from './Pages/laeknar';
+import Landingpage from './Pages/Landingpage/landingpage';
+import Laeknar from './Pages/Laeknar/laeknar';
 import Footer from './Components/Footer/footer';
 
 function App() {
